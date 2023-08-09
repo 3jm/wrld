@@ -1,0 +1,17 @@
+
+.navBar {
+  @apply bg-zinc-950 py-4;
+}
+
+.navList {
+  @apply list-none flex justify-end items-center m-0 p-0;
+}
+
+.navItem {
+  @apply mr-12;
+}
+
+.navItem a {
+  @apply text-white font-semibold hover:text-zinc-300;
+}
+  
