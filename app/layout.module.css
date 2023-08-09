@@ -1,6 +1,6 @@
 
 .navBar {
-  @apply bg-zinc-950 py-4;
+  @apply bg-zinc-950 py-4 flex justify-end;
 }
 
 .navList {
@@ -15,3 +15,27 @@
   @apply text-white font-semibold hover:text-zinc-300;
 }
   
+.navList .logoItem {
+  @apply flex justify-start;
+}
+
+.logoImage {
+  @apply w-12 h-auto mr-12;
+}
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Make the container at least the height of the viewport */
+}
+
+.mainContent {
+  flex: 1; /* Allow the main content to grow and fill the available space */
+  padding: 20px; /* Add some padding to the main content */
+}
+
+.footer {
+  padding: 20px;
+  background-color: #101010;
+  text-align: center;
+}
