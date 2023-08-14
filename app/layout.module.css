@@ -26,16 +26,34 @@
 .pageContainer {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Make the container at least the height of the viewport */
+  min-height: 100vh;
 }
 
 .mainContent {
-  flex: 1; /* Allow the main content to grow and fill the available space */
-  padding: 20px; /* Add some padding to the main content */
+  flex: 1;
+  padding: 20px;
+  display: flex; /* Add this line */
+  flex-direction: column; /* Add this line */
 }
 
-.footer {
-  padding: 20px;
-  background-color: #101010;
-  text-align: center;
+.container {
+  display: grid;
+  grid-template-rows: auto auto; /* Adjust the rows as needed */
+  min-height: 100vh; /* Ensure the container takes at least the full viewport height */
+}
+
+@keyframes jump {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.jump-arrow {
+  animation: jump 1.5s infinite;
 }
