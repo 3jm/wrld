@@ -3,11 +3,6 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import styles from '../layout.module.css';
 
-export const metadata = {
-  title: 'Wrld | Commands',
-  description: 'View a list of wrld\'s commands',
-}
-
 const commands = [
   {
     name: "/search stats <guid>",
