@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
               <Link href="/about" className="text-white hover:text-zinc-300 transition">About</Link>
             </li>
             <li>
-              <Link href="/profile" className="text-white hover:text-zinc-300 transition">Profile</Link>
+              <Link href="/commands" className="text-white hover:text-zinc-300 transition">Commands</Link>
             </li>
           </ul>
         </nav>
