@@ -5,8 +5,8 @@ import styles from '../layout.module.css';
 
 export const metadata = {
   title: 'Wrld | Commands',
-  description: "View all of wrlds commands",
-};
+  description: 'View a list of wrld\'s commands',
+}
 
 const commands = [
   {
