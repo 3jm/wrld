@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
               <img
                 src="/assets/logo.png"
                 alt="Logo"
-                className="h-12 w-auto mr-4"
+                className="h-12 w-auto mr-4 rounded-full"
               />
             </Link>
           </div>
@@ -44,7 +44,7 @@ export default function RootLayout({ children }) {
         <footer className='py-5 bg-[#101010] text-center'>
           <div className="flex flex-wrap justify-between md:mb-0 mb-4"> {/* Added margin for mobile */}
             <div className="w-full md:w-1/3 p-4 flex items-center">
-              <img src="/assets/logo.png" alt="Logo" className="mr-6 ml-12" style={{ width: '100px', height: 'auto' }} />
+              <img src="/assets/logo.png" alt="Logo" className="mr-6 ml-12 rounded-full" style={{ width: '100px', height: 'auto' }} />
               <div className="text-left">
                 <p className="font-bold text-white">Wrld</p>
                 <p className="text-zinc-500">06/29/2023</p>

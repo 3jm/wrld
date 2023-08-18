@@ -5,6 +5,10 @@ import styles from '../layout.module.css';
 
 const commands = [
   {
+    name: "/help",
+    description: "Redirects you here or brings up the select menu through a command."
+  },
+  {
     name: "/search stats <guid>",
     description: "Returns stats on a user if valid guid."
   },
@@ -42,7 +46,7 @@ const commands = [
   },
   {
     name: "/cancel <guid>",
-    description: "Cancels automatic rider statistics for that guid. (NEED manage_messages PERMS)"
+    description: "Cancels automatic rider statistics for that guid. (NEED manage_messages PERMS)."
   },
   {
     name: "/autostatsview",
@@ -61,12 +65,16 @@ const commands = [
     description: "Bot's latency."
   },
   {
+    name: "/information github <username>",
+    description: "View someones github."
+  },
+  {
     name: "/duck",
-    description: "Returns a cute duck"
+    description: "Returns a cute duck."
   },
   {
     name: "/names lookup <user: optional>",
-    description: "Shows past usernames for a user"
+    description: "Shows past usernames for a user."
   },
   {
     name: "/names clear",
@@ -75,6 +83,38 @@ const commands = [
   {
     name: "/information about",
     description: "Show's information about the server."
+  },
+  {
+    name: "/mymxb races",
+    description: "View a list of upcoming races."
+  },
+  {
+    name: "/mymxb championship",
+    description: "View a list of championship series races."
+  },
+  {
+    name: "/mymxb statistics",
+    description: "View a racer's statistics."
+  },
+  {
+    name: "/mymxb registered",
+    description: "Check if a user is registered for a specific race."
+  },
+  {
+    name: "/mymxb results",
+    description: "View the results a user got in a specific race."
+  },
+  {
+    name: "/settings commands restrict <channel>",
+    description: "Set a commands channel for the bot (Multiple channels allowed)."
+  },
+  {
+    name: "/settings commands unrestrict",
+    description: "Remove command channel restrictions."
+  },
+  {
+    name: "/changelog",
+    description: "View the most recent or all MX Bikes game updates with patch notes."
   },
 ];
 

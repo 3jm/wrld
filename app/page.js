@@ -5,7 +5,7 @@ export default function Home() {
     <main className="flex flex-col justify-center items-center p-4 md:p-12">
       <div className="flex flex-col md:flex-row w-full max-w-screen-xl">
         <div className="w-full md:w-1/2 p-4 md:h-[70vh] flex justify-center items-center">
-          <img src="/assets/logo.png" alt="Logo" className="w-3/4 h-auto md:w-1/2 md:h-auto" />
+          <img src="/assets/logo.png" alt="Logo" className="w-3/4 h-auto rounded-full md:w-1/2 md:h-auto" />
         </div>
         <div className="w-full md:w-1/2 p-4 md:h-[70vh] flex flex-col justify-center items-center">
           <h1 className="text-3xl font-semibold mb-4 text-[#b899ff]">Wrld</h1>
