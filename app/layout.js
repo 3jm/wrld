@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <div className={styles.pageContainer}>
-        <nav className="flex justify-between items-center py-4 px-6 bg-zinc-950">
+        <nav className="flex justify-between items-center py-4 px-6 z-50">
           <div className="flex items-center">
             <Link href="/">
               <img
@@ -41,28 +41,28 @@ export default function RootLayout({ children }) {
           {children}
         </main>
           
-        <footer className='py-5 bg-[#101010] text-center'>
-          <div className="flex flex-wrap justify-between md:mb-0 mb-4"> {/* Added margin for mobile */}
+        <footer className='py-5 bg-[#0a0a0a] text-center z-50'>
+          <div className="flex flex-wrap justify-between"> {/* Added margin for mobile */}
             <div className="w-full md:w-1/3 p-4 flex items-center">
               <img src="/assets/logo.png" alt="Logo" className="mr-6 ml-12 rounded-full" style={{ width: '100px', height: 'auto' }} />
               <div className="text-left">
                 <p className="font-bold text-white">Wrld</p>
-                <p className="text-zinc-500">06/29/2023</p>
-                <p className="text-zinc-500">Owned by <span className='text-[#b899ff]'>Blind</span></p>
-                <p className="text-zinc-500">@ 2023 <span className='text-[#b899ff]'>Wrld</span>. All rights reserved.</p>
+                <p className="text-zinc-500">06/27/2023</p>
+                <p className="text-zinc-500">Owned by <span className='text-[#547db3]'>Blind</span></p>
+                <p className="text-zinc-500">© 2023 <span className='text-[#547db3]'>Wrld</span>. All rights reserved.</p>
               </div>
             </div>
             <div className="w-full md:w-1/3 p-4">
               <p className="font-bold text-white">Contact</p>
-              <p className="text-zinc-500">Discord: <span className='text-[#b899ff]'>@onlyblind</span></p>
-              <p className="text-zinc-500 ">Server: <a href='https://discord.gg/2vEqW5GfHU' className="underline hover:text-[#8652ff] transition duration-300" target="_blank" rel="noopener noreferrer">discord.gg/2vEqW5GfHU</a></p>
+              <p className="text-zinc-500">Discord: <span className='text-[#547db3]'>@onlyblind</span></p>
+              <p className="text-zinc-500 ">Server: <a href='https://discord.gg/2vEqW5GfHU' className="underline hover:text-[#547db3] transition duration-300" target="_blank" rel="noopener noreferrer">discord.gg/2vEqW5GfHU</a></p>
             </div>
             <div className="w-full md:w-1/3 p-4">
               <p className="font-bold text-white">Links</p>
               <p className="text-zinc-500">
-                <a href="https://pepiti.com/" className="underline hover:text-[#8652ff] transition duration-300" target="_blank" rel="noopener noreferrer">https://pepiti.com/</a>
+                <a href="https://pepiti.com/" className="underline hover:text-[#547db3] transition duration-300" target="_blank" rel="noopener noreferrer">https://pepiti.com/</a>
                 <br />
-                <a href="https://mymxb.com/" className="underline hover:text-[#8652ff] transition duration-300" target="_blank" rel="noopener noreferrer">https://MyMXB.com/</a>
+                <a href="https://mymxb.com/" className="underline hover:text-[#547db3] transition duration-300" target="_blank" rel="noopener noreferrer">https://MyMXB.com/</a>
               </p>
             </div>
           </div>

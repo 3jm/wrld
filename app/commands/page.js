@@ -47,7 +47,7 @@ const commands = [
   },
   {
     name: "/cancel <guid>",
-    description: "Cancels automatic rider statistics for that guid. (NEED manage_messages PERMS).",
+    description: "Cancels automatic rider statistics for that guid.",
     permissions: ["Manage Messages"]
   },
   {
@@ -143,7 +143,7 @@ export default function Home() {
     <div className="command-card-wrapper">
       <div className="command-card">
         <div className="command-header flex justify-between items-center">
-          <div className="command-name text-[#8652ff] font-bold">{command.name}</div>
+          <div className="command-name text-[#547db3] font-bold">{command.name}</div>
         </div>
         <div className="command-description text-white mt-2">{command.description}</div>
         {command.permissions && command.permissions.length > 0 && (
@@ -163,7 +163,7 @@ export default function Home() {
   
 
   return (
-      <main className="flex justify-center items-center p-4 md:p-12">
+      <main className="flex justify-center items-center p-4">
         <div className="flex flex-col md:flex-row w-full md:w-3/4 justify-center items-start">
           <div className="bg-[#101010] p-4 md:p-8 rounded-lg md:w-3/4">
             <h1 className='text-center font-bold text-xl mb-5'>
