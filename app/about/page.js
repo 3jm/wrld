@@ -3,10 +3,14 @@ export const metadata = {
   description: 'About wrld and it\'s intensions.',
 }
 import Link from 'next/link'
+import Head from 'next/head';
 import styles from '../layout.module.css'
 export default function Home() {
   return (
     <main className="flex justify-between flex-col items-center p-12">
+      <Head>
+          <link rel="icon" href="/assets/favicon.ico" />
+        </Head>
       <div className="flex justify-between flex-col items-center">
       <Link href="/" className='w-48 h-auto mb-2'>
          <img

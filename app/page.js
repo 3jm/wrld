@@ -2,10 +2,15 @@
 import styles from './page_css.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import Head from 'next/head';
+
 
 export default function Home() {
   return (
     <main className="">
+      <Head>
+        <link rel="icon" href="/assets/favicon.ico" />
+      </Head>
       <section className='wrapper -z-50'>
         <div id='stars' className='overflow-hidden'></div>
         <div id='stars2' className='overflow-hidden'></div>

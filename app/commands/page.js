@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Head from 'next/head';
 import styles from '../layout.module.css';
 
 const commands = [
@@ -164,10 +165,13 @@ export default function Home() {
 
   return (
       <main className="flex justify-center items-center p-4">
+        <Head>
+          <link rel="icon" href="/assets/favicon.ico" />
+        </Head>
         <div className="flex flex-col md:flex-row w-full md:w-3/4 justify-center items-start">
           <div className="bg-[#101010] p-4 md:p-8 rounded-lg md:w-3/4">
             <h1 className='text-center font-bold text-xl mb-5'>
-              Command List [{numCommands}]
+              Wrld has {numCommands} available commands.
             </h1>
             <div className="mb-4">
               <input
