@@ -1,8 +1,8 @@
+'use client'
 import './globals.css'
 import Link from 'next/link'
 import styles from './layout.module.css'
-import React from 'react';
-
+import React, { useEffect, useState } from 'react';
 
 export const metadata = {
   title: 'Wrld | MXB Bot',
@@ -10,38 +10,63 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <html lang="en">
       <body>
         <div className={styles.pageContainer}>
-        <nav className="flex justify-between items-center py-4 px-6 z-50">
-          <div className="flex items-center">
-            <Link href="/">
-              <img
-                src="/assets/logo.png"
-                alt="Logo"
-                className="h-12 w-auto mr-4 rounded-full"
-              />
-            </Link>
-          </div>
-          <ul className="flex space-x-8 mr-4 text-lg">
-            <li>
-              <Link href="/" className="text-white hover:text-zinc-300 transition">Home</Link>
-            </li>
-            <li>
-              <Link href="/about" className="text-white hover:text-zinc-300 transition">About</Link>
-            </li>
-            <li>
-              <Link href="/commands" className="text-white hover:text-zinc-300 transition">Commands</Link>
-            </li>
-          </ul>
-        </nav>
+        <nav
+            className={`${
+              isScrolled
+                ? 'backdrop-blur-sm bg-transparent shadow-lg'
+                : 'bg-transparent'
+            } sticky top-0 z-50 transition-all duration-300 z-1`}
+          >
+            <div className="flex justify-between items-center py-4 px-6">
+              <div className="flex items-center">
+                <Link href="/">
+                  <img
+                    src="/assets/logo.png"
+                    alt="Logo"
+                    className="h-12 w-auto mr-4 rounded-full"
+                  />
+                </Link>
+              </div>
+              <ul className="flex space-x-8 text-lg">
+                <li>
+                  <Link href="/" className="text-white hover:text-zinc-300 transition">Home</Link>
+                </li>
+                <li>
+                  <Link href="/about" className="text-white hover:text-zinc-300 transition">About</Link>
+                </li>
+                <li>
+                  <Link href="/commands" className="text-white hover:text-zinc-300 transition">Commands</Link>
+                </li>
+              </ul>
+            </div>
+          </nav>
 
         <main className={styles.mainContent}>
           {children}
         </main>
           
-        <footer className='py-5 bg-[#0a0a0a] text-center z-50'>
+        <div className='py-5 bg-[#0a0a0a] text-center z-50'>
           <div className="flex flex-wrap justify-between"> {/* Added margin for mobile */}
             <div className="w-full md:w-1/3 p-4 flex items-center">
               <img src="/assets/logo.png" alt="Logo" className="mr-6 ml-12 rounded-full" style={{ width: '100px', height: 'auto' }} />
@@ -66,7 +91,7 @@ export default function RootLayout({ children }) {
               </p>
             </div>
           </div>
-        </footer>
+        </div>
         </div>
       </body>
     </html>

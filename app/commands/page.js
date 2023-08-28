@@ -141,7 +141,7 @@ export default function Home() {
   
   
   const CommandCard = ({ command }) => (
-    <div className="command-card-wrapper">
+    <div className="command-card-wrapper z-10">
       <div className="command-card">
         <div className="command-header flex justify-between items-center">
           <div className="command-name text-[#547db3] font-bold">{command.name}</div>
