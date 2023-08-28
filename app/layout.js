@@ -4,11 +4,6 @@ import Link from 'next/link'
 import styles from './layout.module.css'
 import React, { useEffect, useState } from 'react';
 
-export const metadata = {
-  title: 'Wrld | MXB Bot',
-  description: 'The only MXB Bot you will ever need.',
-}
-
 export default function RootLayout({ children }) {
   const [isScrolled, setIsScrolled] = useState(false);
 
